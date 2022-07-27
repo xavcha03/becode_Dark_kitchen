@@ -64,7 +64,16 @@ block\_\_element--modifier
 
 - La branch MAIN ne sert que pour des versions validées par tous et testées
 - Décomposer son travail en étapes simples et à chaque fois créér une branche
+- Des soucis de versions arriveront. Il va falloir apprendre à les gerer.
 
+### Commandes
 
+- git branch nomDeBranch
+- git checkout nomDeBranch
+- git checkout -b nomDeBranch (pour créer et aller dans la nouvelle branche)
+- git add *
+- git commit -m "Un message pour que la team comprenne ce qui à été envoyé"
+- git merge (se placer dans le dossier qui doit recevoir l'autre avant de merge)
+- git push
 
 
