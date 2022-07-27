@@ -59,3 +59,12 @@ block\_\_element--modifier
     }
 
 }
+
+### GIT
+
+- La branch MAIN ne sert que pour des versions validées par tous et testées
+- Décomposer son travail en étapes simples et à chaque fois créér une branche
+
+
+
+
