@@ -58,6 +58,14 @@ table {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 900px) {
+  .aboutUs {
+    background-image: url("/assets/img/spoon_spices.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: right 0% bottom 88%;
+  }
+}
 .aboutUs h1 {
   font-family: Josefin Sans, sans-serif;
   font-weight: 300;
@@ -86,23 +94,20 @@ table {
 }
 
 .aboutUs__members {
-  width: 100vh;
+  height: 30rem;
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding-top: 2rem;
 }
 @media screen and (min-width: 900px) {
   .aboutUs__members {
     flex-direction: row;
-    justify-content: space-around;
     width: 80%;
   }
 }
 .aboutUs__members__chef {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
@@ -110,20 +115,22 @@ table {
 @media screen and (min-width: 900px) {
   .aboutUs__members__chef {
     flex-direction: row;
+    padding-right: 7%;
+    gap: 2rem;
   }
 }
 .aboutUs__members__chef .chef__image {
-  width: 20rem;
-  height: 20rem;
+  width: 16rem;
+  height: 16rem;
   border-radius: 50%;
   object-fit: cover;
-  border: #B7D08F solid 14px;
+  border: #B7D08F solid 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 900px) {
   .aboutUs__members__chef .chef__image {
-    width: 25rem;
-    height: 25rem;
+    width: 26rem;
+    height: 26rem;
   }
 }
 .aboutUs__members__chef .chef__card {
@@ -149,9 +156,19 @@ table {
     text-align: left;
   }
 }
+@media screen and (min-width: 900px) {
+  .aboutUs__members__staff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 28rem;
+  }
+}
 .aboutUs__members__staff .staff__card {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 2rem;
   padding-left: 1rem;
   height: 9rem;
@@ -172,6 +189,7 @@ table {
 }
 
 .aboutUs__kitchen {
+  display: none;
   height: 20rem;
   background-size: 90%;
   background-color: #8f9bd0;

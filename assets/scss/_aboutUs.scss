@@ -1,9 +1,18 @@
 @import './utils/variables';
 .aboutUs{
+   
     color: $color-dark;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include responsive-desktop {
+    background-image: url('/assets/img/spoon_spices.png');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: right 0% bottom 88%;
+    }
+  
+        
     h1{
         font-family:#{$font-main};
         font-weight:300;
@@ -34,15 +43,14 @@
 }
 
 .aboutUs__members{
-    width: 100vh;
+    
+    height: 30rem;
 
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding-top: 2rem;
     @include responsive-desktop {
         flex-direction: row;
-        justify-content: space-around;
         width:80%
     }
 
@@ -50,24 +58,25 @@
     &__chef{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 1rem;
         padding: 1rem;
         @include responsive-desktop {
             flex-direction: row;
+            padding-right: 7%;
+            gap: 2rem;
         }
         .chef__image{
-            width: 20rem;
-            height:20rem;
+            width: 16rem;
+            height:16rem;
             border-radius: 50%;
             object-fit: cover;
 
-            border: #B7D08F solid 14px;
+            border: #B7D08F solid 10px;
             box-shadow: $effect-boxShadow;
             @include responsive-desktop {
-                width: 25rem;
-                height:25rem;
+                width: 26rem;
+                height:26rem;
             }
         }
         .chef__card{
@@ -97,10 +106,18 @@
 
     // Style de la partie STAFF
     &__staff{
+        @include responsive-desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 28rem;
+        }
        
         .staff__card{
             display: flex;
             flex-direction: row;
+            align-items: center;
             gap: 2rem;
             padding-left: 1rem;
             height: 9rem;
@@ -126,6 +143,7 @@
 }
 
 .aboutUs__kitchen{
+    display: none;
     height: 20rem;
     background-size: 90%;
     background-color: #8f9bd0;
