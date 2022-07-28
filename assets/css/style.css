@@ -123,26 +123,43 @@ table {
       .mainNav .darkModeBtn-outside {
         display: inline-block; } }
 
-.darkModeBtn input {
+:root {
+  --cursorDiametre: 20px; }
+
+.darkModeBtn {
+  background-color: #f5f5f5;
+  display: inline-block;
+  padding: 2px var(--cursorDiametre);
+  border-radius: calc(var(--cursorDiametre)/2);
   position: relative; }
-.darkModeBtn input::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: -100%;
-  width: 26px;
-  height: 26px;
-  background-image: url(../img/lune.svg);
-  background-repeat: no-repeat; }
-.darkModeBtn input::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  right: -100%;
-  width: 26px;
-  height: 26px;
-  background-image: url(../img/sun.svg);
-  background-repeat: no-repeat; }
+  .darkModeBtn__switch {
+    width: calc(var(--cursorDiametre)*2);
+    background-color: #212021;
+    padding: 1px 2px;
+    border-radius: calc(var(--cursorDiametre)/2);
+    display: flex; }
+    .darkModeBtn__switch--on {
+      justify-content: flex-end; }
+    .darkModeBtn__switch::before, .darkModeBtn__switch::after {
+      content: '';
+      display: block;
+      width: var(--cursorDiametre);
+      height: var(--cursorDiametre);
+      position: absolute;
+      top: 2px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+    .darkModeBtn__switch::before {
+      left: 0;
+      background-image: url(../img/sun.svg); }
+    .darkModeBtn__switch::after {
+      right: 0;
+      background-image: url(../img/moon.svg); }
+    .darkModeBtn__switch__cursor {
+      width: var(--cursorDiametre);
+      height: var(--cursorDiametre);
+      background-color: #f5f5f5;
+      border-radius: calc(var(--cursorDiametre)/2); }
 
 /*# sourceMappingURL=style.css.map */
