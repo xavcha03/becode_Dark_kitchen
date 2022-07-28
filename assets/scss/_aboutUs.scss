@@ -8,7 +8,7 @@
     @include responsive-desktop {
     background-image: url('/assets/img/spoon_spices.png');
     background-repeat: no-repeat;
-    background-size: 15%;
+    background-size: 11%;
     background-position: right 0% bottom 88%;
     }
   
@@ -44,8 +44,6 @@
 
 .aboutUs__members{
     
-    height: 30rem;
-
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
@@ -72,7 +70,7 @@
             border-radius: 50%;
             object-fit: cover;
 
-            border: #B7D08F solid 10px;
+            border: $color-red solid 10px;
             box-shadow: $effect-boxShadow;
             @include responsive-desktop {
                 width: 26rem;
@@ -143,32 +141,32 @@
 }
 
 .aboutUs__kitchen{
-    display: none;
-    height: 20rem;
-    background-size: 90%;
-    background-color: #8f9bd0;
-    box-shadow: $effect-boxShadow;
-    
-    
+    padding: 1rem;;
     .carousel__container{
-       background-color: $color-red;
-       background-size: 80%;
-       background-repeat: none;
-       height: 20rem;
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(110,29,16,1) 10%, rgba(110,29,16,1) 90%, rgba(255,255,255,1) 90%);
+        background-repeat: none;
+        height: 20rem;
         display: flex;
         flex-direction: row;
 
         overflow: hidden;
-       
+        @include responsive-desktop {
+            background: linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(110,29,16,1) 5%, rgba(110,29,16,1) 95%, rgba(255,255,255,1) 95%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
 
     }
     .caroussel__image{
         width:90vw;
         height:18rem;
-        
+        object-fit: cover;
         padding:1rem;
         @include responsive-desktop {
-            width: 30%;
+            width: 31%;
+            height: 18rem;
         }
         
     }

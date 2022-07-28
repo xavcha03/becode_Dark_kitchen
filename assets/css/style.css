@@ -62,7 +62,7 @@ table {
   .aboutUs {
     background-image: url("/assets/img/spoon_spices.png");
     background-repeat: no-repeat;
-    background-size: 15%;
+    background-size: 11%;
     background-position: right 0% bottom 88%;
   }
 }
@@ -94,7 +94,6 @@ table {
 }
 
 .aboutUs__members {
-  height: 30rem;
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
@@ -124,7 +123,7 @@ table {
   height: 16rem;
   border-radius: 50%;
   object-fit: cover;
-  border: #B7D08F solid 10px;
+  border: #6e1b10 solid 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 @media screen and (min-width: 900px) {
@@ -189,29 +188,35 @@ table {
 }
 
 .aboutUs__kitchen {
-  display: none;
-  height: 20rem;
-  background-size: 90%;
-  background-color: #8f9bd0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
 }
 .aboutUs__kitchen .carousel__container {
-  background-color: #6e1b10;
-  background-size: 80%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 10%, rgb(110, 29, 16) 10%, rgb(110, 29, 16) 90%, rgb(255, 255, 255) 90%);
   background-repeat: none;
   height: 20rem;
   display: flex;
   flex-direction: row;
   overflow: hidden;
 }
+@media screen and (min-width: 900px) {
+  .aboutUs__kitchen .carousel__container {
+    background: linear-gradient(90deg, rgb(255, 255, 255) 5%, rgb(110, 29, 16) 5%, rgb(110, 29, 16) 95%, rgb(255, 255, 255) 95%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .aboutUs__kitchen .caroussel__image {
   width: 90vw;
   height: 18rem;
+  object-fit: cover;
   padding: 1rem;
 }
 @media screen and (min-width: 900px) {
   .aboutUs__kitchen .caroussel__image {
-    width: 30%;
+    width: 31%;
+    height: 18rem;
   }
 }
 .aboutUs__kitchen .carousel__bouton {
