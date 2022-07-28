@@ -1,0 +1,94 @@
+.mainNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-dark+50;
+    position: relative;
+
+    padding : 9px;
+
+
+    &__img{
+    }
+
+    &__btnNav{
+        width: 30px;
+        height: 30px;
+        background-image: url('../img/iconHamburger.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        border:none;
+        @include responsive-desktop{
+            display: none;
+        }
+     }
+
+    &__linkList{
+        display: none;
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: $color-dark;
+        
+
+        @include responsive-desktop{
+            display: flex;
+            background-color: transparent;
+            position: relative;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &--active{
+            display: flex;
+            
+        }
+
+        
+
+        &__link{
+            width: 100%;
+            @include responsive-desktop{
+                width: auto;
+            }
+            a{
+                display: inline-block;
+                width: 100%; 
+                padding: 6px;
+                font-family: $font-main;
+                font-size: 2em;
+                text-align: center;
+                text-decoration:none;
+                color:$color-white;
+                @include responsive-desktop{
+                    width: auto;
+                }
+
+                &:hover{
+                    background-color: $color-red;
+                }
+
+            }
+        }
+    }
+
+    .darkModeBtn-inside{
+        @include responsive-desktop{
+            display: none;
+        }
+    }
+
+    .darkModeBtn-outside{
+        display: none;
+        @include responsive-desktop{
+            display: inline-block;
+        }
+    }
+
+}

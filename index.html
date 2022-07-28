@@ -12,7 +12,37 @@
   </head>
   <body>
     <!-- Début Navigation-->
+    <nav class="mainNav">
+      <img class="mainNav__img" src="./assets/img/logo_mini.png" alt="logo">
+      <button id="mainNavBtn" class="mainNav__btnNav"></button>
+      <ul id="mainNav" class="mainNav__linkList mainNav__linkList--active">
+        <li class="mainNav__linkList__link">
+          <a href="#">Accueil</a>
+        </li> 
+        <li class="mainNav__linkList__link">
+          <a href="#">Menu</a>
+        </li>
+        <li class="mainNav__linkList__link">
+          <a href="#">A propos</a>
+        </li>
+        <li class="mainNav__linkList__link">
+          <a href="#">avis</a>
+        </li>
+        <li class="mainNav__linkList__link">
+          <a href="#">Contact</a>
+        </li>
+        <li class="mainNav__linkList__link">
+          <button class="button button-shoppingCard"></button>
+        </li>
+        <li class="mainNav__linkList__link darkModeBtn-inside" >
+          <div class="darkModeBtn">
+            <input type="checkbox" />
+          </div>
+        </li>
+      </ul>
+      <div class="darkModeBtn darkModeBtn-outside"><input type="checkbox" /></div>
 
+    </nav>
     <!-- Fin Navigation-->
 
     <!-- Début Main-->
@@ -49,3 +79,4 @@
     <!-- Fin Footer-->
   </body>
 </html>
+<script src="assets/js/navigation.js"></script>
