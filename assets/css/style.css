@@ -68,6 +68,7 @@ table {
   background-color: #2b2a2b;
   position: fixed;
   width: 100%;
+  z-index: 99;
   padding: 4px 9px; }
   @media screen and (min-width: 900px) {
     .mainNav {

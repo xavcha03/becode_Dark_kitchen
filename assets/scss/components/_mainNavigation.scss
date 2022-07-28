@@ -5,6 +5,7 @@
     background-color: $color-dark+10;
     position: fixed;
     width: 100%;
+    z-index: 99;
 
     padding : 4px 9px;
     @include responsive-desktop{
