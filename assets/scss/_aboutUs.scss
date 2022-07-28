@@ -1,0 +1,151 @@
+@import './utils/variables';
+@media screen and (max-width : 400px){
+.aboutUs{
+    color: $color-dark;
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-family:#{$font-main};
+        font-weight:300;
+        font-size: 1.4rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem 52px;
+        gap: 1rem;
+        
+        width: 100vw;
+
+        text-transform: uppercase;
+         
+        border-bottom: 1px solid #6E1D10;
+    }
+    #shosix_strong{
+        font-weight: 500;
+    }
+    h3{
+        font-family: $font-name;
+        font-weight: 600;
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+    }
+}
+
+.aboutUs__members{
+    width: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    // Style de la partie CHEF
+    &__chef{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+        .chef__image{
+            width: 20rem;
+            height:20rem;
+            border-radius: 50%;
+            object-fit: cover;
+
+            border: #B7D08F solid 14px;
+            box-shadow: $effect-boxShadow;
+        }
+        .chef__card{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:1rem;
+            align-items: center;
+
+            height: 10rem;
+           
+            &__description{
+               line-height: 1.8rem;
+               font-family: $font-text;
+            }
+        }
+    }
+
+    // Style de la partie STAFF
+    &__staff{
+       
+        .staff__card{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            padding-left: 1rem;
+            height: 9rem;
+            
+        }
+        .staff__card__image{
+            width:8rem;
+            height: 8rem;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: $effect-boxShadow;
+        }
+        .staff__card__name{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        gap: 6rem;
+
+        width: 6rem;
+        }
+    }
+}
+
+.aboutUs__kitchen{
+    width: 90%;
+    height: 20rem;
+    border: solid 4px rgb(142, 109, 109);
+    box-shadow: $effect-boxShadow;
+    position: relative;
+    
+    .carousel__container{
+        width:90vw;
+        height:335px;
+    }
+    .carousel__bouton{
+        width:2rem;
+        height: 2rem;
+
+        position: absolute;
+        cursor: pointer;
+        top:50%;
+    }
+    #arrow_r{
+        color: $color-white;
+        right:0;
+        opacity: 0.4;
+        transform: rotate(0deg);
+        transform: all 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+            opacity: 1;
+            transform: all 0.3s ease;
+        }
+    }
+    #arrow_l{
+        color: white;
+        left:0;
+        opacity: 0.4;
+        transform: rotate(180deg);
+        transform: all 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+            opacity: 1;
+            transform: rotate(180deg);
+            transform: all 0.3s ease;
+        }
+    }
+
+}
+}
