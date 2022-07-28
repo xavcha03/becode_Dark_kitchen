@@ -1,0 +1,95 @@
+@import './utils/variables';
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    background-image: url('/assets/images__writeComment/Wine.png');
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: right 100% bottom -30%;
+
+    &__title{
+        font-family:#{$font-main};
+        font-weight:300;
+        font-size: 1.3rem;
+        text-align: center;
+        padding: 1rem ;
+        gap: 0.6rem;
+
+        text-transform: uppercase;
+        border-bottom: 3px solid #6E1D10;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+        align-items: center;
+
+        padding: 1rem;
+    }
+    .clients__info{
+        outline: none;
+
+        width: 80%;
+        height:2rem;
+    
+
+        background:$color-white;
+        box-shadow: $effect-boxShadow;
+        border: none;
+        border-radius: 1rem;
+        &::placeholder{
+            color: #807F7F;
+            font-family: $font-text;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        
+        }
+    }
+    .clients__message{
+        outline: none;
+
+        width: 80%;
+        height:10rem;
+    
+
+        background: $color-white;
+        box-shadow: $effect-boxShadow;
+        border: none;
+        border-radius: 2rem;
+        &::placeholder{
+            color: #807F7F;
+            font-family: $font-text;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        }
+    }
+    &__submit{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    &__button{
+        background-color: $color-red;
+        color:$color-white;
+        width: 30%;
+        height: 2rem;
+
+        font-family: $font-main;
+        text-transform: uppercase;
+
+        text-align: center;
+        border: 2px solid #CEB6B6;
+        box-shadow:$effect-boxShadow;
+        border-radius: 1rem;
+        cursor: pointer;
+    } 
+        
+    }
+}
+
