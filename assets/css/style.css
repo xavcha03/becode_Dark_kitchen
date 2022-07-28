@@ -45,6 +45,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box; }
+
 .button {
   width: 30px;
   height: 30px;
@@ -62,9 +65,18 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #535253;
-  position: relative;
-  padding: 9px; }
+  background-color: #2b2a2b;
+  position: fixed;
+  width: 100%;
+  padding: 4px 9px; }
+  @media screen and (min-width: 900px) {
+    .mainNav {
+      padding: 18px 26px; } }
+  .mainNav__logo {
+    width: 61px; }
+    @media screen and (min-width: 900px) {
+      .mainNav__logo {
+        width: 96px; } }
   .mainNav__btnNav {
     width: 30px;
     height: 30px;
@@ -72,6 +84,7 @@ table {
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
+    background-size: contain;
     border: none; }
     @media screen and (min-width: 900px) {
       .mainNav__btnNav {
@@ -81,6 +94,8 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
+    padding: 10px 0;
     position: absolute;
     top: 100%;
     left: 0;
@@ -96,6 +111,7 @@ table {
     .mainNav__linkList--active {
       display: flex; }
     .mainNav__linkList__link {
+      text-align: center;
       width: 100%; }
       @media screen and (min-width: 900px) {
         .mainNav__linkList__link {
@@ -105,10 +121,11 @@ table {
         width: 100%;
         padding: 6px;
         font-family: "Josefin Sans", sans-serif;
-        font-size: 2em;
+        font-size: 1.44em;
         text-align: center;
         text-decoration: none;
-        color: #f5f5f5; }
+        color: #f5f5f5;
+        text-transform: uppercase; }
         @media screen and (min-width: 900px) {
           .mainNav__linkList__link a {
             width: auto; } }
