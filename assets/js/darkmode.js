@@ -28,4 +28,4 @@ class Switch {
   }
 }
 
-let darkModeBtn = new Switch(document.querySelectorAll(".darkModeBtn"));
+let darkMode = new Switch(document.querySelectorAll(".darkModeBtn"));
