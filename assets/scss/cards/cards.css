@@ -1,0 +1,77 @@
+.cardsList {
+  display: flex;
+  justify-content: center;
+  flex-basis: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: initial;
+  gap: 0.1rem;
+}
+.cardsList .cardsList__card {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: #d9d9d9;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.35));
+  width: 20rem;
+  border-radius: 10px;
+  border-bottom-left-radius: 45rem;
+  border-top-left-radius: 45rem;
+  margin: 1rem;
+}
+.cardsList .cardsList__card h3 {
+  font-size: normal;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+}
+.cardsList .cardsList__card p {
+  font-size: small;
+}
+.cardsList .cardsList__card button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: none;
+  border: none;
+}
+.cardsList .cardsList__card .cardsList__cardimg {
+  left: 0;
+  width: 5rem;
+  border-radius: 50%;
+  z-index: 1;
+  filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.35));
+}
+
+.texts {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0.3rem;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  max-width: 15rem;
+  overflow: hidden;
+}
+
+.pricebutton {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  font-size: small;
+  color: #d9d9d9;
+  background-color: #1D4931;
+  border-radius: 60rem;
+  padding: 4px;
+}/*# sourceMappingURL=cards.css.map */
