@@ -1,9 +1,9 @@
 @import './utils/variables';
-@media screen and (max-width : 400px){
 .aboutUs{
     color: $color-dark;
     display: flex;
     flex-direction: column;
+    align-items: center;
     h1{
         font-family:#{$font-main};
         font-weight:300;
@@ -12,14 +12,15 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 1rem 52px;
-        gap: 1rem;
-        
-        width: 100vw;
+        padding: 1rem ;
+        gap: 0.6rem;
 
         text-transform: uppercase;
          
-        border-bottom: 1px solid #6E1D10;
+        border-bottom: 3px solid #6E1D10;
+        @include responsive-desktop {
+            width: 30%;
+        }
     }
     #shosix_strong{
         font-weight: 500;
@@ -38,6 +39,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-top: 2rem;
+    @include responsive-desktop {
+        flex-direction: row;
+        justify-content: space-around;
+        width:80%
+    }
 
     // Style de la partie CHEF
     &__chef{
@@ -46,7 +53,10 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        padding-top: 1rem;
+        padding: 1rem;
+        @include responsive-desktop {
+            flex-direction: row;
+        }
         .chef__image{
             width: 20rem;
             height:20rem;
@@ -55,6 +65,10 @@
 
             border: #B7D08F solid 14px;
             box-shadow: $effect-boxShadow;
+            @include responsive-desktop {
+                width: 25rem;
+                height:25rem;
+            }
         }
         .chef__card{
 
@@ -65,10 +79,18 @@
             align-items: center;
 
             height: 10rem;
+
+            @include responsive-desktop {
+                align-items:flex-start;
+            }
            
             &__description{
                line-height: 1.8rem;
                font-family: $font-text;
+               text-align: center;
+               @include responsive-desktop {
+                text-align: left;
+            }
             }
         }
     }
@@ -90,6 +112,7 @@
             object-fit: cover;
             border-radius: 50%;
             box-shadow: $effect-boxShadow;
+            
         }
         .staff__card__name{
         display: flex;
@@ -103,17 +126,36 @@
 }
 
 .aboutUs__kitchen{
-    width: 90%;
     height: 20rem;
-    border: solid 4px rgb(142, 109, 109);
+    background-size: 90%;
+    background-color: #8f9bd0;
     box-shadow: $effect-boxShadow;
-    position: relative;
+    
     
     .carousel__container{
+       background-color: $color-red;
+       background-size: 80%;
+       background-repeat: none;
+       height: 20rem;
+        display: flex;
+        flex-direction: row;
+
+        overflow: hidden;
+       
+
+    }
+    .caroussel__image{
         width:90vw;
-        height:335px;
+        height:18rem;
+        
+        padding:1rem;
+        @include responsive-desktop {
+            width: 30%;
+        }
+        
     }
     .carousel__bouton{
+        z-index: 1;
         width:2rem;
         height: 2rem;
 
@@ -148,4 +190,4 @@
     }
 
 }
-}
+
