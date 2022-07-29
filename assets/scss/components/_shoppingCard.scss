@@ -1,0 +1,35 @@
+.shopingList{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 70vh;
+    transform: translate(-50%, -50%);
+    background-color: $color-dark;
+    min-width: 300px;
+    color:white;
+
+    display: none;
+
+    table{
+        width: 100%;
+        justify-content: center;
+    }
+
+    th{
+        text-align: center;
+    }
+
+    thead{
+        font-size: 1.5em;
+    }
+
+    tbody{
+
+    }
+
+
+    &--actif{
+        display: block;
+    }
+
+}
