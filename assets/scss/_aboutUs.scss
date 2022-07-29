@@ -1,4 +1,10 @@
 @import './utils/variables';
+
+.darkmode--on > .aboutUs{
+    background-color: $color-dark;
+    color: $color-white;
+}
+
 .aboutUs{
    
     color: $color-dark;
@@ -161,12 +167,12 @@
     }
     .caroussel__image{
         width:90vw;
-        height:18rem;
+        height:20rem;
         object-fit: cover;
         padding:1rem;
         @include responsive-desktop {
-            width: 31%;
-            height: 18rem;
+            width: 33%;
+            height: 20rem;
         }
         
     }
