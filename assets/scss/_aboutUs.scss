@@ -1,6 +1,16 @@
 @import './utils/variables';
+
+.darkmode--on > .aboutUs{
+    background-color: $color-dark;
+    color: $color-white;
+
+    h1{
+        color:blue;
+    }
+}
+
 .aboutUs{
-   
+    *
     color: $color-dark;
     display: flex;
     flex-direction: column;
@@ -10,6 +20,8 @@
     background-repeat: no-repeat;
     background-size: 11%;
     background-position: right 0% bottom 88%;
+
+    
     }
   
         
