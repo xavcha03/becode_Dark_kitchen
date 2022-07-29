@@ -1,0 +1,209 @@
+@import './utils/variables';
+.aboutUs{
+   
+    color: $color-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive-desktop {
+    background-image: url('/assets/img/spoon_spices.png');
+    background-repeat: no-repeat;
+    background-size: 11%;
+    background-position: right 0% bottom 88%;
+    }
+  
+        
+    h1{
+        font-family:#{$font-main};
+        font-weight:300;
+        font-size: 1.4rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem ;
+        gap: 0.6rem;
+
+        text-transform: uppercase;
+         
+        border-bottom: 3px solid #6E1D10;
+        @include responsive-desktop {
+            width: 30%;
+        }
+    }
+    #shosix_strong{
+        font-weight: 500;
+    }
+    h3{
+        font-family: $font-name;
+        font-weight: 600;
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+    }
+}
+
+.aboutUs__members{
+    
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    @include responsive-desktop {
+        flex-direction: row;
+        width:80%
+    }
+
+    // Style de la partie CHEF
+    &__chef{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        @include responsive-desktop {
+            flex-direction: row;
+            padding-right: 7%;
+            gap: 2rem;
+        }
+        .chef__image{
+            width: 16rem;
+            height:16rem;
+            border-radius: 50%;
+            object-fit: cover;
+
+            border: $color-red solid 10px;
+            box-shadow: $effect-boxShadow;
+            @include responsive-desktop {
+                width: 26rem;
+                height:26rem;
+            }
+        }
+        .chef__card{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:1rem;
+            align-items: center;
+
+            height: 10rem;
+
+            @include responsive-desktop {
+                align-items:flex-start;
+            }
+           
+            &__description{
+               line-height: 1.8rem;
+               font-family: $font-text;
+               text-align: center;
+               @include responsive-desktop {
+                text-align: left;
+            }
+            }
+        }
+    }
+
+    // Style de la partie STAFF
+    &__staff{
+        @include responsive-desktop {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 28rem;
+        }
+       
+        .staff__card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+            padding-left: 1rem;
+            height: 9rem;
+            
+        }
+        .staff__card__image{
+            width:8rem;
+            height: 8rem;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: $effect-boxShadow;
+            
+        }
+        .staff__card__name{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        gap: 6rem;
+
+        width: 6rem;
+        }
+    }
+}
+
+.aboutUs__kitchen{
+    padding: 1rem;;
+    .carousel__container{
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(110,29,16,1) 10%, rgba(110,29,16,1) 90%, rgba(255,255,255,1) 90%);
+        background-repeat: none;
+        height: 20rem;
+        display: flex;
+        flex-direction: row;
+
+        overflow: hidden;
+        @include responsive-desktop {
+            background: linear-gradient(90deg, rgba(255,255,255,1) 5%, rgba(110,29,16,1) 5%, rgba(110,29,16,1) 95%, rgba(255,255,255,1) 95%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+    }
+    .caroussel__image{
+        width:90vw;
+        height:18rem;
+        object-fit: cover;
+        padding:1rem;
+        @include responsive-desktop {
+            width: 31%;
+            height: 18rem;
+        }
+        
+    }
+    .carousel__bouton{
+        z-index: 1;
+        width:2rem;
+        height: 2rem;
+
+        position: absolute;
+        cursor: pointer;
+        top:50%;
+    }
+    #arrow_r{
+        color: $color-white;
+        right:0;
+        opacity: 0.4;
+        transform: rotate(0deg);
+        transform: all 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+            opacity: 1;
+            transform: all 0.3s ease;
+        }
+    }
+    #arrow_l{
+        color: white;
+        left:0;
+        opacity: 0.4;
+        transform: rotate(180deg);
+        transform: all 0.3s ease;
+        &:hover{
+            transform: scale(1.1);
+            opacity: 1;
+            transform: rotate(180deg);
+            transform: all 0.3s ease;
+        }
+    }
+
+}
+
