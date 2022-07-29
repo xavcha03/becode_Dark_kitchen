@@ -187,8 +187,7 @@ table {
     color: blue; }
 
 .aboutUs {
-  *
-    color: #212021;
+  color: #212021;
   display: flex;
   flex-direction: column;
   align-items: center; }
