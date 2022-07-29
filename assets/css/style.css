@@ -224,6 +224,53 @@ table {
   border-radius: calc(var(--cursorDiametre) / 2);
 }
 
+:root {
+  --cursorDiametre: 20px;
+}
+
+.darkModeBtn {
+  background-color: #f5f5f5;
+  display: inline-block;
+  padding: 2px var(--cursorDiametre);
+  border-radius: calc(var(--cursorDiametre) / 2);
+  position: relative;
+}
+.darkModeBtn__switch {
+  width: calc(var(--cursorDiametre) * 2);
+  background-color: #212021;
+  padding: 1px 2px;
+  border-radius: calc(var(--cursorDiametre) / 2);
+  display: flex;
+}
+.darkModeBtn__switch--on {
+  justify-content: flex-end;
+}
+.darkModeBtn__switch::before, .darkModeBtn__switch::after {
+  content: "";
+  display: block;
+  width: var(--cursorDiametre);
+  height: var(--cursorDiametre);
+  position: absolute;
+  top: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.darkModeBtn__switch::before {
+  left: 0;
+  background-image: url(../img/sun.svg);
+}
+.darkModeBtn__switch::after {
+  right: 0;
+  background-image: url(../img/moon.svg);
+}
+.darkModeBtn__switch__cursor {
+  width: var(--cursorDiametre);
+  height: var(--cursorDiametre);
+  background-color: #f5f5f5;
+  border-radius: calc(var(--cursorDiametre) / 2);
+}
+
 .darkmode--on > .aboutUs {
   background-color: #212021;
   color: #f5f5f5;

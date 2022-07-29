@@ -1,4 +1,5 @@
 @import './utils/variables';
+@import './elements/darkModeBtn';
 
 .darkmode--on > .aboutUs{
     background-color: $color-dark;
@@ -6,7 +7,6 @@
 }
 
 .aboutUs{
-   
     color: $color-dark;
     display: flex;
     flex-direction: column;
