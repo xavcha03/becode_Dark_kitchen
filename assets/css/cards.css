@@ -57,13 +57,20 @@
   overflow: hidden;
 }
 
+.fav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .pricebutton {
   display: flex;
   position: relative;
+  font-size: large;
+  color: #d3aa43;
   bottom: 0;
   left: 0;
   justify-content: space-between;
-  padding-right: 0.5rem;
 }
 
 .price {
@@ -74,6 +81,18 @@
   background-color: #1d4931;
   border-radius: 60rem;
   padding: 4px;
+}
+
+.cardsList__card:hover {
+  transform: scale(2, 2);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 5rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=cards.css.map */
