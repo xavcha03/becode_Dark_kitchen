@@ -108,7 +108,7 @@ footer a {
 }
 .footer__content .footer__content__contact img {
   width: 1rem;
-  length: 1rem;
+  height: 1rem;
   object-fit: contain;
   padding-right: 0.4rem;
 }
@@ -136,7 +136,7 @@ footer a {
 }
 .socialMedia img {
   width: 2rem;
-  length: 2rem;
+  height: 2rem;
 }
 
 .copyright {
