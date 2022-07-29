@@ -203,3 +203,97 @@ const collectionDishes= [
       </div> */
 
       //Variable de tri. Si elle est null, aucun tri n'est fait.
+let selectedCategory = null;
+
+//Création de la liste unique des catégories
+let listCategory = [];
+collectionDishes.forEach((dish) => {
+  dish.category.forEach((category) => {
+    if (!listCategory.includes(category)) listCategory.push(category);
+  });
+});
+//Insertion des categorys uniques dans le document
+let categoryNavElt = document.querySelector("#categoryList");
+categoryNavElt.innerHTML =
+  categoryNavElt.innerHTML +
+  listCategory
+    .sort()
+    .map((category) => {
+      return `<li class="badgesList__item"><a class="badgesList--badge" href="index.html?category=${category}">${category}</a></li>`;
+    })
+    .join("");
+
+//Rendu initial
+dishListRender(collectionDishes, selectedCategory);
+
+//
+// Fonctions
+//
+
+//Affiche la liste des jeux d'une collection en fonction de son category
+function dishListRender(collectionDishes, selectedCategory) {
+  //Sélection de l'élément contenant les cards de jeux
+  let listCardsElt = document.querySelector("#cardsList");
+
+  //Parcours de la liste des jeux
+  listCardsElt.innerHTML = collectionDishes
+    //Si selectedCategory est utilisé, on filtre la collection
+    .filter((dishes) =>
+      selectedCategory != null ? dishes.category.includes(selectedCategory) : true
+    )
+    //Parcours de la liste avec affichage
+    .map(
+      (dish) =>
+        `
+          <article class="cardsList__card">
+            <img class="cardsList__card__img" src="${dish.picture}" alt="#" />
+            <ul class="cardsList__card__categoryList badgesList">
+              ${dish.category
+                //.slice(0, 5)    //Possibilité de limiter la quantité de category de jeu à afficher
+                .map(
+                  (category) =>
+                    `<li class="badgesList__item"><a class="badgesList--badge" href="#">${category}</a></li>`
+                )
+                .join("")}
+            </ul>
+            <section class="cardsList__card__content">
+            <h2 class="cardsList__card__title">${dish.title}</h2>
+            <div class="cardsList__card__titleDescription">
+              <h3 class="cardsList__card__developper">${dish.developer}</h3>
+              <time>${dish.releaseDate}</time>
+            </div>
+            <p class="cardsList__card__description">${dish.description}</p>
+            <nav class="cardsList__card__socialLink">
+              ${dish.socialLink
+                .map(
+                  (socialLink) =>
+                    `
+                  <a href="${socialLink.url}"><img src="./assets/img/${socialLink.network}.svg" alt="youtube link" /></a>
+                  `
+                )
+                .join("")}
+              
+              
+            </nav>
+            </section>
+          </article>
+        `
+    )
+    .join("");
+  //Fin de map
+
+  //Ajout d'un event à chaque category
+
+  let categorysElt = document.querySelectorAll(".badgesList--badge"); //Selection du container
+  categorysElt.forEach((category) => {
+    //ajout d'un event sur tous les categorys
+    category.addEventListener("click", function (e) {
+      e.preventDefault(); //Annulation de l'action par defaut
+      selectedCategory = category.innerHTML; //Récupération du nom du category
+      if (selectedCategory == "reset") {
+        selectedCategory = null;
+      }
+      dishListRender(COLLECTION, selectedCategory); //Mise à jour du rendu de la liste avec le category sélectionné
+    });
+  });
+}
