@@ -205,7 +205,7 @@ const collectionDishes= [
               //Create div TEXT
               let cardsListDivText = document.createElement('div');
               cardsListDiv.appendChild(cardsListDivText);
-              cardsListDivText.classList.add("cardsList__card__text");
+              cardsListDivText.classList.add("texts");
 
                 //Create H3
                 let cardTitle = document.createElement('h3');
@@ -218,24 +218,26 @@ const collectionDishes= [
                 let text = document.createTextNode(list[i].description);
                 cardText.appendChild(text);
                 cardsListDivText.appendChild(text);
-                cardTitle.classList.add("card__description");
+                cardText.classList.add("card__description");
 
             // Create div Button
               let cardsListDivButton = document.createElement('div');
-              cardsListDiv.appendChild(cardsListDivButton);
-              cardsListDivButton.classList.add("cardsList__card__button");
+              cardsListDivText.appendChild(cardsListDivButton);
+              cardsListDivButton.classList.add("pricebutton");
 
               //Create Span
                 let cardPrice = document.createElement('span');
                 let price= document.createTextNode(list[i].prix);
                 cardPrice.appendChild(price);
                 cardsListDivButton.appendChild(cardPrice);
-                cardPrice.classList.add("card__title");
+                cardPrice.classList.add("price");
               //Create Button
                 let cardsButton = document.createElement('button');
-                cardsButton.src=("assets/img/Vector.svg");
                 cardsListDivButton.appendChild(cardsButton);
-                cardsButton.classList.add("cardsList__cardimg");
+                //create image heart
+                let heart = document.createElement('img');
+                heart.src=("assets/img/Vector.svg");
+                cardsListDivButton.appendChild(heart);
             }
           }
 
