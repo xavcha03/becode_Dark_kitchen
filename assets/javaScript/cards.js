@@ -76,7 +76,7 @@ const collectionDishes= [
         name: " Camembert au four ", 
         category: " entrées ", //entrées/plats/desserts
         diet: "végétarien", //végan, végétarien, viande
-        photo: 'assets/images__cards/.camembert.jpg',
+        photo: 'assets/images__cards/camembert.jpg',
         description: " Fromage maturé " ,
         prix: " 13,00 ",
           },
@@ -112,7 +112,7 @@ const collectionDishes= [
         name: "  Mousse au chocolat ", 
         category: " dessert ", //entrées/plats/desserts
         diet: "végétarien", //végan, végétarien, viande
-        photo: 'assets/images__cards/mousse.jpg',
+        photo: 'assets/images__cards/mousse.png',
         description: " Chocolat noir de Brugges " ,
         prix: " 11,00 ",
           },
@@ -130,7 +130,7 @@ const collectionDishes= [
         name: " Tiramisu au spéculoos ", 
         category: " dessert ", //entrées/plats/desserts
         diet: "végétarien", //végan, végétarien, viande
-        photo: 'assets/images__cards/tiramisu.jpg',
+        photo: 'assets/images__cards/tiramisu.jpeg',
         description: " " ,
         prix: " 11,00 ",
           },
@@ -139,7 +139,7 @@ const collectionDishes= [
         name: " Coca ", 
         category: " boisson ", //entrées/plats/desserts
         diet: "", //végan, végétarien, viande
-        photo: 'assets/images__cards/coca.jpg',
+        photo: 'assets/images__cards/coca.png',
         description: " Coca Cola Light, Coca Cola Zero, Coca Cola Cherry " ,
         prix: " 2,50 ",
           },
@@ -166,7 +166,7 @@ const collectionDishes= [
         name: " Julier ", 
         category: " boisson ", //entrées/plats/desserts
         diet: "", //végan, végétarien, viande
-        photo: 'assets/images__cards/jupiler.jpg',
+        photo: 'assets/images__cards/jupiler.png',
         description: " Classique, zéro " ,
         prix: " 3,00 ",
           },
@@ -175,33 +175,68 @@ const collectionDishes= [
         name: " Chimay ", 
         category: " boisson ", //entrées/plats/desserts
         diet: "", //végan, végétarien, viande
-        photo: 'assets/images__cards/chimay.jpg',
+        photo: 'assets/images__cards/chimay.png',
         description: " Rouge, Bleue, Blanche" ,
         prix: " 5,00 ",
           },
 ]
 
 
+      function cardRecipe(list){
 
-/* <div class="cardsList__card">
-        <img
-          src="https://cdn.pratico-pratiques.com/app/uploads/sites/3/2018/08/14113103/vol-au-vent-au-poulet-express.jpg"
-          alt=""
-          class="cardsList__cardimg"
-        />
-        <div class="texts">
-          <h3>Vol au vent</h3>
-          <p>
-            vol, au, vent, in, gre, dients, a, mettre, ici, lorem, ipsum, dolor,
-          </p>
+        let numberOfRecipe = list.length;
+        let containerCard = document.querySelector('.cardsList');
+        
+        // Loop that creates a section and a paragraph for each element of the list
+            for (let i = 0; i < numberOfRecipe; i++) {
+        
+        //adding new elements from COLLECTION
+              //CREATE THE INDIVIDUAL DIV OF MY CARDS
+              let cardsListDiv = document.createElement('div');
+              containerCard.appendChild(cardsListDiv);
+              cardsListDiv.classList.add("cardsList__card");
 
-          <div class="pricebutton">
-            <span class="price">6.99€</span>
-            <button><img src="assets/img/Vector.svg" alt="" /></button>
-          </div>
-        </div>
-      </div> */
+              //Create image
+              let cardsImg = document.createElement('img');
+              cardsImg.src=(list[i].photo);
+              cardsListDiv.appendChild(cardsImg);
+              cardsImg.classList.add("cardsList__cardimg");
 
-      //Variable de tri. Si elle est null, aucun tri n'est fait.
+              //Create div TEXT
+              let cardsListDivText = document.createElement('div');
+              cardsListDiv.appendChild(cardsListDivText);
+              cardsListDivText.classList.add("cardsList__card__text");
 
-  
+                //Create H3
+                let cardTitle = document.createElement('h3');
+                let titleText= document.createTextNode(list[i].name);
+                cardTitle.appendChild(titleText);
+                cardsListDivText.appendChild(cardTitle);
+                cardTitle.classList.add("card__title");
+                //Create P
+                let cardText = document.createElement('p');
+                let text = document.createTextNode(list[i].description);
+                cardText.appendChild(text);
+                cardsListDivText.appendChild(text);
+                cardTitle.classList.add("card__description");
+
+            // Create div Button
+              let cardsListDivButton = document.createElement('div');
+              cardsListDiv.appendChild(cardsListDivButton);
+              cardsListDivButton.classList.add("cardsList__card__button");
+
+              //Create Span
+                let cardPrice = document.createElement('span');
+                let price= document.createTextNode(list[i].prix);
+                cardPrice.appendChild(price);
+                cardsListDivButton.appendChild(cardPrice);
+                cardPrice.classList.add("card__title");
+              //Create Button
+                let cardsButton = document.createElement('button');
+                cardsButton.src=("assets/img/Vector.svg");
+                cardsListDivButton.appendChild(cardsButton);
+                cardsButton.classList.add("cardsList__cardimg");
+            }
+          }
+
+cardRecipe(collectionDishes);
