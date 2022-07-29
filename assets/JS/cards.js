@@ -202,4 +202,4 @@ const collectionDishes= [
         </div>
       </div> */
 
-      
+      //Variable de tri. Si elle est null, aucun tri n'est fait.
