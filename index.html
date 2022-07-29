@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -16,51 +17,75 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- Début Navigation-->
-    <nav class="mainNav">
-      <img class="mainNav__logo" src="./assets/img/logo_mini.png" alt="logo" />
-      <button id="mainNavBtn" class="mainNav__btnNav"></button>
-      <ul id="mainNav" class="mainNav__linkList">
-        <li class="mainNav__linkList__link">
-          <a href="#">Accueil</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">Menu</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">A propos</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">avis</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">Contact</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <button class="button button-shoppingCard"></button>
-        </li>
-        <li class="mainNav__linkList__link darkModeBtn-inside">
+    <header>
+       
+       <!-- Début Navigation-->
+      <nav class="mainNav">
+        <img class="mainNav__logo" src="./assets/img/logo_mini.png" alt="logo" />
+        <button id="mainNavBtn" class="mainNav__btnNav"></button>
+        <ul id="mainNav" class="mainNav__linkList">
+          <li class="mainNav__linkList__link">
+            <a href="#">Accueil</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">Menu</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">A propos</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">avis</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">Contact</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <button class="button button-shoppingCard"></button>
+          </li>
+          <li class="mainNav__linkList__link darkModeBtn-inside">
+            <div id="darkModeBtn" class="darkModeBtn">
+              <div class="darkModeBtn__switch">
+                <div class="darkModeBtn__switch__cursor"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="darkModeBtn-outside">
           <div id="darkModeBtn" class="darkModeBtn">
             <div class="darkModeBtn__switch">
               <div class="darkModeBtn__switch__cursor"></div>
             </div>
           </div>
-        </li>
-      </ul>
-      <div class="darkModeBtn-outside">
-        <div id="darkModeBtn" class="darkModeBtn">
-          <div class="darkModeBtn__switch">
-            <div class="darkModeBtn__switch__cursor"></div>
-          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <section class="header__section">
+        <img class="logo1" src="assets/images/logoShosix_mobile.png" alt="logo-marque"/>
+        <img class="logo2" src="assets/images/logoAssiette_mobile.png" lt="logo-assiette_mobile"/>
+        <img class="logo3" src="assets/images/logoAssiette.png" lt="logo-marque"/>
+        <ul class="header__section__ul">
+          <li><a href=""> PASSER COMMANDE </a></li>
+        </ul>
+      </section>
+    </header>
     <!-- Fin Navigation-->
-
+    <!-- Fin HEADER-->
+    <main>
     <!-- Début Main-->
 
     <!-- Fin Main-->
     <!-- Début Menu-->
+      <!-- Début nav menu-->
+    <nav class="nav__menu">
+      <ul>
+        <li><a href=""> TOUT </a></li>
+        <li><a href=""> ENTRÉES </a></li>
+        <li><a href=""> PLATS </a></li>
+        <li><a href=""> DESSERTS </a></li>
+        <li><a href=""> BOISSONS </a></li>
+      </ul>
+    </nav>
+      <!-- FIN nav menu-->
+      <!-- début card list-->
     <div class="cardsList">
       <div class="cardsList__card">
         <img
@@ -205,7 +230,7 @@
   </div>
 </section>
     <!-- Fin Contact-->
-
+  </main>
     <!-- Début Footer-->
   <footer>
     <div class="footer__content">
