@@ -1,5 +1,11 @@
 @import './utils/variables';
 
+
+.darkmode--on > .contact{
+    background-color: $color-dark;
+    color: $color-white;
+}
+
 .contact{
     display: flex;
     flex-direction: column;

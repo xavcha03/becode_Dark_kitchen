@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,53 +16,78 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/cards.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/commcard.css" />
   </head>
   <body>
-    <!-- Début Navigation-->
-    <nav class="mainNav">
-      <img class="mainNav__logo" src="./assets/img/logo_mini.png" alt="logo" />
-      <button id="mainNavBtn" class="mainNav__btnNav"></button>
-      <ul id="mainNav" class="mainNav__linkList">
-        <li class="mainNav__linkList__link">
-          <a href="#">Accueil</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">Menu</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">A propos</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">avis</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <a href="#">Contact</a>
-        </li>
-        <li class="mainNav__linkList__link">
-          <button class="button button-shoppingCard"></button>
-        </li>
-        <li class="mainNav__linkList__link darkModeBtn-inside">
+    <header>
+       
+       <!-- Début Navigation-->
+      <nav class="mainNav">
+        <img class="mainNav__logo" src="./assets/img/logo_mini.png" alt="logo" />
+        <button id="mainNavBtn" class="mainNav__btnNav"></button>
+        <ul id="mainNav" class="mainNav__linkList">
+          <li class="mainNav__linkList__link">
+            <a href="#">Accueil</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">Menu</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">A propos</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">avis</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <a href="#">Contact</a>
+          </li>
+          <li class="mainNav__linkList__link">
+            <button class="button button-shoppingCard"></button>
+          </li>
+          <li class="mainNav__linkList__link darkModeBtn-inside">
+            <div id="darkModeBtn" class="darkModeBtn">
+              <div class="darkModeBtn__switch">
+                <div class="darkModeBtn__switch__cursor"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="darkModeBtn-outside">
           <div id="darkModeBtn" class="darkModeBtn">
             <div class="darkModeBtn__switch">
               <div class="darkModeBtn__switch__cursor"></div>
             </div>
           </div>
-        </li>
-      </ul>
-      <div class="darkModeBtn-outside">
-        <div id="darkModeBtn" class="darkModeBtn">
-          <div class="darkModeBtn__switch">
-            <div class="darkModeBtn__switch__cursor"></div>
-          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <section class="header__section">
+        <img class="logo1" src="assets/images/logoShosix_mobile.png" alt="logo-marque"/>
+        <img class="logo2" src="assets/images/logoAssiette_mobile.png" lt="logo-assiette_mobile"/>
+        <img class="logo3" src="assets/images/logoAssiette.png" lt="logo-marque"/>
+        <ul class="header__section__ul">
+          <li><a href=""> PASSER COMMANDE </a></li>
+        </ul>
+      </section>
+    </header>
     <!-- Fin Navigation-->
-
+    <!-- Fin HEADER-->
+    <main>
     <!-- Début Main-->
 
     <!-- Fin Main-->
     <!-- Début Menu-->
+      <!-- Début nav menu-->
+    <nav class="nav__menu">
+      <ul>
+        <li><a href=""> TOUT </a></li>
+        <li><a href=""> ENTRÉES </a></li>
+        <li><a href=""> PLATS </a></li>
+        <li><a href=""> DESSERTS </a></li>
+        <li><a href=""> BOISSONS </a></li>
+      </ul>
+    </nav>
+      <!-- FIN nav menu-->
+      <!-- début card list-->
     <div class="cardsList">
       <div class="cardsList__card">
         <img
@@ -185,7 +212,24 @@
     <!-- Fin About Us-->
 
     <!-- Début Testimonial-->
-
+    <h2 class="commcardh2">ce que nos clients disent de nous</h2>
+    <section class="commcardlist">
+      <div class="comm">
+        <img src="assets/img/comm.jpg" alt="" class="commimg">
+        <div class="nom">
+          <p>Nom et Prenom</p> 
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        </div>  
+        </div>
+        <div class="comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit magni rerum temporibus alias omnis eius ex esse enim voluptate quia, deleniti, perferendis explicabo recusandae eaque officiis dolore ea hic aperiam!</div>
+      </div>
+    </section>
     <!-- Fin Testimonial-->
 
     <!-- Début Contact-->
@@ -205,7 +249,7 @@
   </div>
 </section>
     <!-- Fin Contact-->
-
+  </main>
     <!-- Début Footer-->
   <footer>
     <div class="footer__content">
@@ -270,4 +314,4 @@
 </html>
 <script src="assets/javaScript/navigation.js"></script>
 <script src="assets/javaScript/darkmode.js"></script>
-<script src="/assets/javaScript/cardContent.js"></script>
+<script src="assets/javaScript/cardContent.js"></script>

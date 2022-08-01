@@ -1,6 +1,12 @@
 @import './utils/variables';
+@import './elements/darkModeBtn';
+
+.darkmode--on  .aboutUs{
+    background-color: $color-dark;
+    color: $color-white;
+}
+
 .aboutUs{
-   
     color: $color-dark;
     display: flex;
     flex-direction: column;
@@ -10,6 +16,8 @@
     background-repeat: no-repeat;
     background-size: 11%;
     background-position: right 0% bottom 88%;
+
+    
     }
   
         
@@ -161,12 +169,12 @@
     }
     .caroussel__image{
         width:90vw;
-        height:18rem;
+        height:20rem;
         object-fit: cover;
         padding:1rem;
         @include responsive-desktop {
-            width: 31%;
-            height: 18rem;
+            width: 33%;
+            height: 20rem;
         }
         
     }

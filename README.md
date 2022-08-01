@@ -1,5 +1,7 @@
 # Project Dark Kitchen
 
+sass ./assets/scss/main.scss:./assets/css/style.css --watch
+
 ## Team
 
 - Xavier C.
