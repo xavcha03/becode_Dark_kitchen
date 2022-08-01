@@ -286,7 +286,7 @@ class ShoppingCard {
 
     let cartBtn = document.querySelector(".button-shoppingCard");
     console.log(cartBtn);
-    cartBtn.addEventListener((e) => {
+    cartBtn.addEventListener("click",(e) => {
       document
         .querySelector("#shopingList")
         .classList.toggle("shopingList--actif");
