@@ -1,7 +1,7 @@
 @import './utils/variables';
 @import './elements/darkModeBtn';
 
-.darkmode--on > .aboutUs{
+.darkmode--on  .aboutUs{
     background-color: $color-dark;
     color: $color-white;
 }
