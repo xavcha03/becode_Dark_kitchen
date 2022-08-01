@@ -12,7 +12,6 @@ class Switch {
     elt.addEventListener("click", (e) => {
       e.preventDefault();
       //toggle off<->on de tous les switch
-      console.log(this.btnArr);
       this.btnArr.forEach((cursor) => {
         cursor
           .querySelector(".darkModeBtn__switch")
@@ -20,6 +19,9 @@ class Switch {
       });
       this.status = !this.status;
       console.log("Switch dark-mode to " + this.getStatus());
+      //get the body elemtn
+      let body = document.querySelector("body");
+      body.classList.toggle("darkmode--on");
     });
   }
 
